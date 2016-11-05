@@ -6,6 +6,7 @@ session_start();
 <html>
     <head>
         <title>GenZ Stock Picker - Play</title>
+        
         <link type="text/css" rel="stylesheet" href="main.css">
 
     </head>
@@ -14,10 +15,10 @@ session_start();
             <div class="logo-top">
                 GenZ Stock Picker
             </div>
-            <div class="search-top">
-                <input id="in-search-top" type="text" name="search" placeholder="Search stocks...">
+            <form style="border:none" class="search-top" action="search.php">
+                <input id="in-search-top" type="text" name="stock" placeholder="Search stocks...">
                 <button id="btn-search-top" type="submit">Go</button>
-            </div>
+            </form>
             <div class="drop-top">
                 <a class="drop-nav-link">=</a>
                 <!--<div id="menu-drop-top" class="drop">

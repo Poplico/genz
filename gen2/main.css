@@ -17,7 +17,10 @@ div{
 button {
     border-radius: 3px;
 }
-    
+
+fieldset { 
+    border: 0px;
+}
 /*-----------------------------------------------------------------------------------------------------------------------*/ 
 /*Top Container/Header Functions*/ 
 .errorheader {
@@ -41,7 +44,9 @@ button {
     height: 40px;
     display: block;
     background-color: white;
-    padding: 10px;
+    padding: 10px 0 10px 0px;
+    border-right: 0;
+    border-left: 0;
     line-height: 40px;
 }
 
@@ -74,7 +79,8 @@ button {
     transition: width 0.2s ease-in-out;
 }
 
-#in-search-top:focus {
+
+.search-top:focus {
     width: 300px;
 }
 
@@ -105,7 +111,9 @@ button {
 
 .links-top li {
     float: right;
+    border-right: 1px solid darkred;  
 }
+
 
 .links-top a {
     display: inline-block;
@@ -114,7 +122,7 @@ button {
     padding: 10px;
     width: 50px;
     color: darkred;
-    border-right: 1px solid darkred;  
+    
 }
 
 .links-top a:hover {
@@ -128,7 +136,6 @@ button {
     display: inline-block;
     float: right;
     padding: 0;
-    margin-right: 10px;
     width: 60px;
     
 }
@@ -320,6 +327,7 @@ button {
     position: relative;
     bottom: 7px;
     border: 1px solid darkred;
+    border-right: none;
     background-color: white;
     border-left: none;
 }
@@ -404,10 +412,10 @@ button {
 }
 
 /* Add Zoom Animation */
-.animate {
+/*.animate {
     -webkit-animation: animatezoom 0.3s;
     animation: animatezoom 0.3s
-}
+}*/
 
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
@@ -484,8 +492,13 @@ span.psw {
 
 #sidebar-left {
     width: 12%;; 
-    height: 1000px;
-    background-color: white;
+    height: auto;
+    display: flex;
+    float: left;
     margin: 10px;
     border: 1px solid darkred;
+}
+
+#searched-background {
+    background-color: gainsboro;
 }
