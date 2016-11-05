@@ -12,6 +12,13 @@ $email = $_POST['email'];
 $fname = $_POST['first'];
 $lname = $_POST['last'];
 
+$create = "CREATE TABLE ".$uname."(
+symbol varchar (20) NOT NULL PRIMARY KEY,
+quantity int (30)NOT NULL,
+spent double NOT NULL,
+made double NOT NULL
+) ENGINE=INNODB";
+
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -32,6 +39,7 @@ if (mysqli_query($conn, $sql)) {
         $_SESSION["errormsg"] = "Invalid email format"; 
         $_SESSION["error"] = true;
     } else {
+        $results = mysqli_query($conn, $create);
         header("Location: http://www.genzfinancial.com/gen2/index.php");
         echo "New record created successfully";
         session_unset();
