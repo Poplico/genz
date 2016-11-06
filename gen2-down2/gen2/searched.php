@@ -1,0 +1,98 @@
+<?php
+session_start(); // Starting Session
+include('datafetch.php');
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GenZ Stock Picker - Play</title>
+        <link type="text/css" rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+        <script type="text/javascript" src="http://stocktwits.com/addon/widget/2/widget-loader.min.js"></script>
+    </head>
+    <div class = "container" id="container-top">
+            <div class="logo-top">
+                GenZ Stock Picker
+            </div>
+            <form style="border:none" class="search-top" action="search.php">
+                <input id="in-search-top" type="text" name="stock" placeholder="Search stocks...">
+                <button id="btn-search-top" type="submit">Go</button>
+            </form>
+            <div class="drop-top">
+                <a class="drop-nav-link">=</a>
+                <!--<div id="menu-drop-top" class="drop">
+AAA
+</div>-->
+            </div>
+            <div class="links-top">
+                <ul>
+                    <li><a id="user-nav-link" href="http://www.genzfinancial.com/gen2/landing/login.php">User</a></li>
+                    <li><a id="stocks-nav-link" href="http://www.genzfinancial.com/gen2/stocks">Stocks</a></li>
+                    <li><a id="info-nav-link" href="http://www.genzfinancial.com/contact">Info</a></li>
+                    <li><a id="lb-nav-link" href="http://www.genzfinancial.com/leaderboard">Ranks</a></li>
+                    <li><a id="play-nav-link" href="http://www.genzfinancial.com/gen2/index.php">Play</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "container-body">
+            <!-- TradingView Widget BEGIN -->
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "width": 600,
+                    "height": 400,
+                    "symbol": "<?php echo $_SESSION["sstock"];?>",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "Whtie",
+                    "style": "3",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "save_image": false,
+                    "hideideas": true
+                });
+            </script>
+            <!-- TradingView Widget END -->
+            <div class ="upper-body">
+                <div id="sidebar-left">
+                    <div id="stocktwits-widget-news"></div><a href='http://stocktwits.com' style='font-size: 0px;'>StockTwits</a>
+                    <script type="text/javascript">
+                        STWT.Widget({container: 'stocktwits-widget-news', avatars: 0, symbol: '<?php echo $_SESSION["sstock"];?>', width: '400', height: '500', limit: '25', scrollbars: 'true', streaming: 'true', title: '<?php echo $_SESSION["sstock"];?> Tweets', style: {link_color: '4871a8', link_hover_color: '4871a8', header_text_color: 'f', border_color: '#800000', divider_color: 'cecece', divider_color: 'cecece', divider_type: 'solid', box_color: 'f5f5f5', stream_color: 'ffffff', text_color: '000000', time_color: '999999'}});
+                    </script>
+                </div>
+                <div id="content-body">
+                    <div id="content-right-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-footer">
+            <div id="left-list">
+                <ul>
+                    <li><a href="http://www.genzfinancialfinancial.com/user">User</a></li>
+                    <li><a href="http://www.genzfinancialfinancial.com/stocks">Stocks</a></li>
+                    <li><a href="http://www.genzfinancialfinancial.com/info">Info</a></li>
+                </ul>
+                <ul id="social-icons-footer">
+                    <li><a href="NOTHING">
+                        <img src= "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/instagram_circle-48.png"/></a>
+                    </li>
+                    <li><a href="NOTHING">
+                        <img src= "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-48.png"/></a>
+                    </li>
+                    <li><a href="NOTHING">
+                        <img src= "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png"/></a>
+                    </li>
+                </ul>
+                <ul id="contact-footer">    
+                    <li><a><p>Email: seanliew@genzfinancial.com</p></a></li>
+                    <li><a><p>Phone: 647-455-2108</p></a></li>
+                </ul>
+            </div>
+            <div id="final-footer">
+                <p>Sean Liew, Derek Miller, Paul Santilli, Marie Macdonald, Jacob Salach | Bishop Allen 2016</p>
+            </div>
+        </div>
+    </body>
+</html>
