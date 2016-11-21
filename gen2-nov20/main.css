@@ -1,0 +1,639 @@
+/*Wide Functions------------------------------------------------------------*/
+
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: gainsboro;
+    margin: 0 auto;
+}
+
+.container {
+    border: 1px solid darkred;
+}
+
+div{
+
+}
+
+button {
+    border-radius: 3px;
+}
+
+fieldset { 
+    border: 0px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/ 
+/*Top Container/Header Functions*/ 
+.errorheader {
+    display: flex;
+    height: 30px;
+    background-color: darkred;
+    margin: 0;
+    padding 0;
+    border-bottom: 1px solid white;
+}
+
+.errorheader p {
+    color: white;
+    padding-left: 40px;
+    position: relative; 
+    bottom: 8px;
+    font-size: 14px;
+}
+
+#container-top {
+    width: 100%;
+    height: 40px;
+    display: block;
+    border-top: none;
+    background-color: white;
+    padding: 0px 0 20px 0px;
+    border-right: 0;
+    border-left: 0;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Logo Format*/ 
+
+.logo-top {
+    display: inline-block;
+    margin-left: 2%;
+    float: left;
+    padding-top: 7px;
+    font-family: 'Segoe UI';
+    font-size: 35px;
+    color: darkred;
+}
+.logo-top a{
+    display: block;
+    font-family: 'Segoe UI';
+    font-size: 35px;
+    color: darkred;
+    text-decoration: none;
+}
+
+/*Seachbar*/ 
+
+.search-top {
+    display: inline-block;
+    padding-top: 7px;
+    float: left;
+    margin-left: 4%;
+}
+
+#in-search-top {
+    border: 1px solid darkred;
+    border-radius: 2px;
+    padding-left: 10px;
+    width: 140px;
+    height: 34px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+
+.search-top:focus {
+    width: 300px;
+}
+
+#btn-search-top {
+    background-color: darkred;
+    border: 1px solid darkred;
+    border-radius: 2px;
+    color: white;
+    margin-left: -8px;
+    height: 34px;
+}
+
+/*Links Top Right*/ 
+
+.links-top {
+    display: block;
+    float: right;
+}
+
+.links-top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.links-top li {
+    float: right;
+    border-right: 1px solid darkred;  
+}
+
+
+.links-top a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    width: 50px;
+    height: 30px;
+    color: darkred;
+    
+}
+
+.links-top a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/*Link for Drop Menu*/ 
+
+.drop-top {
+    display: inline-block;
+    float: right;
+    padding: 0;
+    width: 60px;
+    
+}
+
+.drop-top a {
+    display: block;
+    text-align: center;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*Drop Menu*/ 
+.drop-nav-link {
+    text-decoration: none;
+    color: darkred;
+    padding: 20px 10px 10px 10px;
+    height: 30px
+}
+
+#menu-drop-top {
+    position: absolute;
+}
+.dropdown-content {
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0px;
+    border: 1px solid darkred;
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    line-height: 30px;
+
+}
+.dropdown-content a{
+    text-decoration: none;
+    color: darkred;
+    font-size: 15px;
+    width: auto;
+    border-bottom: 1px solid darkred;
+    padding: 14px;
+}
+.dropdown-content a:last-child{
+    border: none;
+}
+.show {
+    display:block;
+}
+.add{
+    background-color: darkred;
+    color: white;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/ 
+/*Mid Container Functions*/ 
+
+.container-body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    overflow: hidden;
+    min-height: 100px; /*placeholder - value removed and blocks of div will take up the space*/
+    display: block;
+    background-image: url(http://www.genzfinancial.com/gen2/img/loginbackdrop.jpg);
+    background-repeat: repeat-x; 
+}
+#searched-body {
+    background-color: white;
+    background-image: none;
+}
+.container-body p {
+    margin:0;
+}
+
+.upper-body {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+}
+.stock-heading {
+    padding: 10px 0;
+    display: block;
+    background-color: darkred;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+}
+.stock-heading p {
+    margin-left: 2%;
+}
+#market-sub {
+    font-size: 10px;
+}
+
+#left-body {
+    width: 70%;
+    display: inline-block;
+    float: left;
+    
+}
+#left-body #content-left-body {
+    margin: 50px 0px 50px 100px;
+}
+#right-body {
+    width: 30%;
+    float: right;
+    display: inline-block;
+}
+#right-body #content-right-body {
+    margin: 100px 0 0 00px;
+}
+#stockimage {
+    width: 200px;
+    margin: 0 0 0 50px;
+}
+#left-body p {
+    display: inline-block;
+    margin: 0 0 0 50px;
+    position: relative; 
+    bottom: 20px;
+    
+}
+#btnloginopen {
+    background-color: darkred;
+    color: white;
+    padding: 20px 150px 20px 115px;
+    margin: 10px 10px 10px 15px;
+    border: 1px solid #bf4300;
+    cursor: pointer;
+    width: 60px;
+    display: block;
+}
+#btnregisteropen {
+    background-color: white;
+    color: darkred;
+    padding: 20px 170px 20px 125px;
+    margin: 10px 10px 10px 0;
+    border: 3px solid #bf4300;
+    cursor: pointer;
+    width: 60px;
+    display: block;
+}
+
+#right-body p {
+    display: block;
+    font-size: 20px;
+
+}
+.loggedin-body {
+    display: block;
+    color: white;
+    margin: 20px 60px;
+    border: 4px solid indianred;
+    border-radius: 10px;
+    background-color: darkred;
+    padding: 30px;
+}
+
+.inside-part{
+    padding: 1px 10px;
+}
+
+#cart-list{
+    display: inline-block;
+    margin: 10px 5px 10px 40px;
+    background: #a34242;
+    border: 3px solid darkred;
+    border-radius: 20px;
+    width: 60%;
+}
+
+#stat-list{
+    display: inline-block;
+    float: right;
+    margin: 10px 40px 10px 5px;
+    background: white;
+    border: 3px solid darkred;
+    border-radius: 20px;
+    width: 20%;
+    color: darkred;
+}
+#stat-list p {
+    margin-left: 5%;
+    text-align: center;
+    width: 90%;
+    border-bottom: 2px solid darkred;
+}
+#cart-list p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 4%;
+    width: 90%;
+    border-bottom: 2px solid white;
+}
+#cart-list ul{
+    display: block;
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+    margin: 10px;
+    line-height: 1.5;
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/ 
+/*Footer Container Functions*/ 
+
+.container-footer {
+    height: 40px;
+    background-color: #470505;
+    color: darkgrey;
+    display: block;
+    width: 100%;
+}
+#left-list {
+    text-align: left;   
+    float: left;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 50px;
+    font-family: sans-serif;
+    color: darkgrey;
+    width: 95%;
+    height: 40px;
+}
+#left-list ul {
+    list-style-type: none;  
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#left-list #social-icons-footer{
+    position: relative;
+    float: right;
+    margin-right: 1%;
+}
+#left-list #social-icons-footer a{
+    padding: 0;
+    width: 20px;
+    margin-left: 10px;
+}
+#social-icons-footer img{
+    float: none;
+    height: 20px;
+}
+#left-list a {
+    float: right;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: darkgray;
+}
+#left-list a:hover {
+    color: bisque;
+}
+#left-list li{
+    display: inline;
+}
+#final-footer {
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid darkred;
+    border-right: none;
+    background-color: white;
+    border-left: none;
+}
+#final-footer p {
+    font-size: 10px;
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 2%; 
+    float: right;
+}
+#left-list #contact-footer {
+    float: right;
+    list-style-type: none;
+    display: inline-block;
+    
+}
+#contact-footer li{
+    float: left;
+    margin-left: 15px;
+    padding-top: 4px;
+    
+}
+.container-footer #contact-footer li a{
+    display: block;
+    width: auto;
+    padding: 0px;
+}
+.container-footer #contact-footer ul{
+    display: inline-block;
+}
+
+#clear-cart-btn{
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: solid 2px darkred;
+    display: block;
+    width: 65px;
+    color: darkred;
+    margin: 10px 5px 10px 40px;
+}
+
+
+
+
+
+/* The Modal (background)---------------------------------------------------------------------------------------------- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 3px solid darkred;
+    border-radius: 3px;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: darkred;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.3s;
+    animation: animatezoom 0.3s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.btnloginform {
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#logintitle {
+    display: block;
+    font-family: 'Segoe UI';
+    font-size: 35px;
+    color: darkred;
+    padding-left: 0px;
+    border: 1px solid darkred;
+}
+
+#cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: darkred;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 0px 0 0px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.label-login {
+    color: darkred; 
+}
+#btn-order {
+    height: 40px;
+    width: 300px;
+    background-color: darkred;
+    border: 2px solid indianred;
+    border-radius: 3px;
+    color: white;
+}
+/* Sidebar---------------------------------------------------------------------------------------------- */
+
+#sidebar-left {
+    height: auto;
+    display: inline-flex;
+    float: left;
+    margin: 10px;
+}
+
+#searched-background {
+    background-color: gainsboro;
+}
+/* LoadingSearchPage---------------------------------------------------------------------------------------------- */
+
+.stretch-page p {
+    text-align: center;
+    color: #DC5753;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 350px auto;
+    width: 200px;
+}
+
+.stretch-page {
+	position: absolute;
+    display: block;
+	left: 0px;
+	top: 60px;
+	width: 100%;
+	height: 1600px;
+	z-index: 9999;
+	background: url('http://www.genzfinancial.com/gen2/img/Preloader_10.gif') 50% 15% no-repeat rgb(249,249,249);
+    border-top: 1px solid darkred;
+}
+
+#invalid-resp p {
+        margin: 350px auto; 
+    width: auto;
+}
+#invalid-resp {
+        height: calc(100% - 61px);
+        background: url('http://www.genzfinancial.com/gen2/img/Preloader_10rev.gif') 50% 31% no-repeat rgb(249,249,249);
+}
