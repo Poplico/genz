@@ -1,0 +1,1 @@
+[24-Nov-2016 02:16:01 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/genzallen/public_html/gen2/buy.php on line 54

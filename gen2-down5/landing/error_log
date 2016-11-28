@@ -1,0 +1,1 @@
+[24-Nov-2016 02:41:47 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/genzallen/public_html/gen2/landing/reg_page.php:46) in /home/genzallen/public_html/gen2/landing/reg_page.php on line 49
