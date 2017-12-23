@@ -1,0 +1,372 @@
+/* CSS Reset for all browser to improve consistency*/
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: #4a4a4a;
+}
+html, body, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    /* Dynamic Background animation credit to 
+    https://www.gradient-animator.com 
+    -Ian Forrest */
+
+    background: linear-gradient(270deg, #ffe7e7, #d4fffc);
+    background-size: 400% 400%;
+
+    background: linear-gradient(270deg, #ffe7e7, #d4fffc, #ffffff);
+    background-size: 600% 600%;
+
+    -webkit-animation: DynamicBackground 60s ease infinite;
+    -moz-animation: DynamicBackground 60s ease infinite;
+    animation: DynamicBackground 60s ease infinite;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    not supported by any browser */
+}
+
+.rotated { 
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.opac {
+    opacity: 0.5;
+}
+/*________________________________________________*/
+/* Dynamic Background animation credit to 
+https://www.gradient-animator.com 
+-Ian Forrest */
+@-webkit-keyframes DynamicBackground {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@-moz-keyframes DynamicBackground {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@keyframes DynamicBackground { 
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+/*________________________________________________*/
+.cover {
+    opacity: 0;
+
+    display: table;
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    border: 1px solid indianred;
+    background: white;
+
+    font-size: 3em;
+}
+.cover-mid {
+    display: table-cell;
+    vertical-align: middle;
+}
+.cover-mid-c {
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+}
+
+/*________________________________________________*/
+
+.info-header {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    text-align: right;
+    background-color: #aaaaaa;
+    opacity: 0.4;
+    padding: 43px 240px 40px 20px;
+    font-size: 1em;
+    font-family: "DINPro",'Open Sans',Arial,Helvetica Neue,sans-serif;
+    color: #4a4a4a;
+    box-shadow: 0 0 5px 10px rgba(170, 170, 170, 1);
+}
+.wrapper-tv{
+    position: absolute;
+    border: 1px solid darkred;
+    height: 100%;
+    width: 100vw;
+    display: table;
+    overflow: hidden;
+}
+
+.wrapper-main-left{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.mid-float-left{
+    font-size: 2em;
+    float: left;
+    margin: 50vh 0 50vh 10px;
+    opacity: 0;
+    font-weight: 300;
+    font-family: "DINPro",'Open Sans',Arial,Helvetica Neue,sans-serif;
+}
+.mid-float-left p {
+    color: #3e3e3e;
+    font-weight: 100;
+    position: relative;
+    bottom: 50px
+}
+
+.mid-float-right {
+    position: relative;
+    right: 10%;
+    bottom: 50px;
+}
+
+.wrapper-prof {
+    opacity: 0;
+    display: none;
+    
+    vertical-align: middle;
+    width: 100vw;
+    max-height: 100%;
+    font-family: "DINPro",'Open Sans',Arial,Helvetica Neue,sans-serif;
+    color: #7d8491;
+}
+
+.prof-bubble {
+    position: relative;
+    z-index: 100;
+    
+    height: 100px;
+    width: 100px;
+    border: 3px solid #7d8491;  
+    border-radius: 50px;
+    
+    text-align: center;
+    margin: 0px auto;
+    
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    
+    cursor: pointer;
+}
+.prof-bubble:hover{
+    transition-delay:0.2s;
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+.prof-bubble:hover .visNone{
+    transition-delay:0.2s;
+    visibility: visible;
+    opacity: 1;
+}
+.bubble {
+    position: relative;
+    top: 40px;
+    color: #3e3e3e;
+    
+    text-decoration: none;
+}
+.visNone {
+    margin-top: 30px;
+    color: grey;
+    visibility: hidden;
+    opacity: 0;
+    
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.user-quote {
+    height: 100%;
+    width: auto;
+    width: 300px;
+    position: absolute;
+    left: 55%;
+    top: 0;
+}
+
+.quote-float{
+    font-size: 1.4em;
+    position: relative;
+    bottom: 40px;
+    margin: 50vh 0 50vh 0;
+}
+/*________________________________________________*/
+
+.nav-drop-link {
+    display: none;
+    cursor: pointer;
+
+    margin: 0;
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;  
+
+    font-size: 300%;
+    color: darkred;
+}
+
+.nav-drop-link a {
+    padding: 20px 30px;
+}
+
+.wrapper-nav {
+    display: none;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+
+    padding-top: 100px;
+}
+
+.nav-link {
+    margin: 30% 0 30% 20px;
+    font-family: "DINPro", "Helvetica";
+    font-size: 1.5em;
+    text-align: right;
+
+}
+.nav-link:last-child {
+    margin-bottom: 0;
+}
+.nav-link a {
+    padding: 25px 30px 25px 20px;
+    text-decoration: none;
+    color: darkred;
+
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
+.nav-link a:hover{
+    padding-right: 50px;
+    color: #A90000;
+}
+
+#git-nav-link {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    color: #3e3e3e;
+}
+
+/*-----------------------------*/
+
+#sean {
+    position: relative;
+    right: 30%;
+}
+
+#marie {
+    position: relative;
+    right: 20%;
+}
+#derek {
+    position: relative;
+    right: 10%;
+}
+#paul {
+    position: relative;
+    right: 20%;
+}
+#jakob {
+    position: relative;
+    right: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

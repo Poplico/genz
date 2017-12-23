@@ -1,23 +1,7 @@
 <?php
 session_start();
 
-$servername = "www.genzfinancial.com";
-$username = "remotegenz";
-$password = "password";
-$dbname = "genz-info-user";
-
-$uname = $_POST['uname'];
-$psw = $_POST['psw'];
-$email = $_POST['email'];
-$fname = $_POST['first'];
-$lname = $_POST['last'];
-
-$create = "CREATE TABLE ".$uname."(
-symbol varchar (20) NOT NULL PRIMARY KEY,
-quantity int (30)NOT NULL,
-spent double NOT NULL,
-made double NOT NULL
-) ENGINE=INNODB";
+include('../datafetch.php');
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -25,6 +9,24 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+$uname = strtolower($_POST['uname']);
+$psw = $_POST['psw'];
+$email = $_POST['email'];
+$fname = $_POST['first'];
+$lname = $_POST['last'];
+
+$create = "CREATE TABLE ".$uname."(
+id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+symbol varchar (20) NOT NULL,
+quantity varchar (20)NOT NULL,
+at varchar (20) NOT NULL,
+spent varchar (20) NOT NULL,
+made varchar (20) NOT NULL,
+PRIMARY KEY(id)
+) ENGINE=INNODB";
+
+
 
 $sql = "INSERT INTO userlogin (username, firstname, lastname, password, email)
 VALUES ('$uname', '$fname', '$lname', '$psw', '$email')";
@@ -47,6 +49,8 @@ if (mysqli_query($conn, $sql)) {
         session_start();
         $_SESSION["userID"] = "$uname";
         $_SESSION["valid"] = true;
+        $_SESSION["firstDir"] = true;
+        $_SESSION["validSymbol"] = true;
     }}
 else {
     header("Location: http://www.genzfinancial.com/gen2/landing/login.php");
