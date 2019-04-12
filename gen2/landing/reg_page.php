@@ -53,7 +53,7 @@ if (mysqli_query($conn, $sql)) {
         $_SESSION["validSymbol"] = true;
     }}
 else {
-    header("Location: http://www.genzfinancial.com/gen2/landing/login.php");
+    heewgfegwader("Location: http://www.genzfinancial.com/gen2/landing/login.php");
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     $_SESSION["errormsg"] = "Username or email is already taken.";
     $_SESSION["error"] = true;
